@@ -29,7 +29,7 @@ ii)Every individual command is a ConcreteCommand ...
 
 ### Usage of command pattern:
 
-* It is used *:
+*It is used:*:
 
 i) When you need parameterize objects according to an action perform.
 ii) When you need to create and execute requests at different times.

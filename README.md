@@ -96,3 +96,32 @@ attacking, Team A becomes defensive. On the other hand, Team B goes for an all-o
 - Context and the Strategy classes normally communicate through the interface specified by the abstract Strategy base class. Strategy base class must expose interface for all the required behaviors, which some concrete Strategy classes might not implement.
 - The application configures the Context with the required Strategy object. Therefore, the application needs to create and maintain two objects in place of one.
 - Since, the Strategy object is created by the application in most cases; the Context has no control on lifetime of the Strategy object. However, the Context can make a local copy of the Strategy object. But, this increases the memory requirement and has a sure performance impact.
+
+## Decorator Patterns
+
+This patterns allow to attach additional responsibilities to an object dynamically. Decorators provide a flexible
+alternative to subclassing for extending functionality.
+
+
+This main principle of this pattern says that we cannot modify existing functionalities but we can extend
+them. In other words, this pattern is open for extension but closed for modification. The core concept
+applies when we want to add some specific functionalities to some specific object instead of to the
+whole class.
+
+### Real-Life Example
+Suppose you already own a house. Now you have decided to add an additional floor. Obviously, you do not
+want to change the architecture of ground floor (or existing floors). You may want to change the design of the
+architecture for the newly added floor without affecting the existing architecture for existing floor(s).
+
+
+### What are the main advantages of using decorator patterns?
+1. Without disturbing existing objects in the system, we can add new functionality to a particular object.
+2. We can code incrementally. For example, we’ll make a simple class first and then one by one we can add decorator objects to them as needed. As a result, we do
+not need to take care of each and every possible scenario in the beginning. On the other hand, we must acknowledge that making a complex class first and then
+extending its functionality is a much more complex procedure.
+
+### How is this pattern different from inheritance?
+We can add or remove responsibilities by simply attaching or detaching decorators. But with the simple inheritance technique, we need to create a new class for new responsibilities. So, there will be many classes inside the system, which in turn can make the system complex.
+
+- What is the major disadvantage of using this pattern?
+First of all, if we are careful enough, there is no significant disadvantage. But if we create too many decorators in the system, the system will be hard to maintain and debug. At the same time, the decorators can create unnecessary confusion.

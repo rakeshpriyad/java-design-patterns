@@ -1,4 +1,4 @@
-simplified-java-design-patterns
+#Simplified Java Design patterns
 
 1. Command Design Pattern:
 

@@ -47,7 +47,7 @@ in the system are also aware of this mediator and they know that if they need to
 themselves, they need to go through the mediator. The advantage of using such a mediator is that we can
 reduce the direct interconnections among the objects and thus lower the coupling.
 
-Real-Life Example
+### Real-Life Example 
 In an airplane application, before taking off the flight undergoes a series of checks. These checks confirm
 that all components/parts (which are dependent on each other) are in perfect condition.
 Also, the pilot needs to communicate with the towers at the airport. In general, one pilot from one
@@ -68,3 +68,31 @@ relationship—which is much easier to read and understand.
 ### Disadvantages of Mediator Patterns:
 1. Sometimes the encapsulation process becomes tricky and we find it difficult to
 maintain or implement.
+
+
+# Strategy Patterns (Or, Policy Patterns)
+It define a family of algorithms, encapsulate each one, and make them interchangeable. The
+strategy pattern lets the algorithm vary independently from client to client.
+
+We can select the behavior of an algorithm dynamically at runtime.
+
+### Real–Life Example
+In a football match, at the last moment, in general, if Team A is leading Team B by a score of 1-0, instead of
+attacking, Team A becomes defensive. On the other hand, Team B goes for an all-out attack to score
+
+
+### Advantages of using Strategy Pattern
+
+- Using encapsulation the algorithm separately, new algorithms complying with the same interface can be easily introduced.
+- The strategy pattern application can switch strategies at run-time.
+- Strategy enables the clients to choose the required algorithm, without using a "switch" statement or a series of "if-else" statements.
+- Data structures used for implementing the algorithm is completely encapsulated in Strategy classes. Therefore, the implementation of an algorithm can be changed without affecting the Context class.
+- The same Strategy object can be strategically shared between different Context objects. However, the shared Strategy object should not maintain states across invocations.
+
+### Disadvantages of using Strategy Pattern
+
+- The application must be aware of all the strategies to select the right one for the right situation.
+- Strategy and Context classes may be tightly coupled. The Context must supply the relevant data to the Strategy for implementing the algorithm and sometimes, all the data passed by the Context may not be relevant to all the Concrete Strategies.
+- Context and the Strategy classes normally communicate through the interface specified by the abstract Strategy base class. Strategy base class must expose interface for all the required behaviors, which some concrete Strategy classes might not implement.
+- The application configures the Context with the required Strategy object. Therefore, the application needs to create and maintain two objects in place of one.
+- Since, the Strategy object is created by the application in most cases; the Context has no control on lifetime of the Strategy object. However, the Context can make a local copy of the Strategy object. But, this increases the memory requirement and has a sure performance impact.

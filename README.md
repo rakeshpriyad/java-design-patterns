@@ -31,6 +31,6 @@ ii)Every individual command is a ConcreteCommand ...
 
 *It is used:*:
 
-i) When you need parameterize objects according to an action perform.
-ii) When you need to create and execute requests at different times.
-iii) When you need to support rollback, logging or transaction functionality.
+- When you need parameterize objects according to an action perform.
+- When you need to create and execute requests at different times.
+- When you need to support rollback, logging or transaction functionality.

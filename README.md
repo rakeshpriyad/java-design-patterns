@@ -125,3 +125,33 @@ We can add or remove responsibilities by simply attaching or detaching decorator
 
 - What is the major disadvantage of using this pattern?
 First of all, if we are careful enough, there is no significant disadvantage. But if we create too many decorators in the system, the system will be hard to maintain and debug. At the same time, the decorators can create unnecessary confusion.
+
+
+## Observer Patterns
+
+Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+In this pattern, there are many observers (objects) which are observing a particular subject (object). Observers are basically interested and want to be notified when there is a change made inside that subject. So, they register themselves to that subject. When they lose interest in the subject they simply unregister from the subject. Sometimes this model is also referred to as the Publisher-Subscriber model.
+
+
+
+## Visitor Patterns
+
+Represent an operation to be performed on the elements of an object structure. The visitor pattern lets you define a new operation without changing the classes of the elements on which it operates.
+
+
+This pattern helps us to add new functionalities to an existing object structure in such a way that the old structure remains unaffected by these changes. So, we can follow the open/close principle here (i.e., extension allowed but modification disallowed for entities like class, function, modules, etc.).
+
+- Real-Life Example
+Consider a taxi booking scenario. The taxi arrives at our defined location for the pickup. Once we enter into it, the visiting taxi takes control of the transportation. It can choose a different way toward our destination and we may or may not have any prior knowledge of that way.
+
+
+1. As mentioned earlier, the visitor pattern is very useful for adding new operations without affecting the existing structure, which was the key aim behind this
+pattern.
+2. Visitor operations are controlled in a unified manner. 
+3. On the other hand, the class encapsulation may need to be compromised when visitors are used. If the existing structure is really complex, the traversal
+mechanism becomes complex.
+4. The visitor hierarchy becomes difficult to maintain when we need to add new concrete classes to our existing architecture frequently (e.g., in our program, if
+we now add Myclass2, we need to add additional operations in the visitor class hierarchy to support this pattern).
+5. Sometimes we need to perform some unrelated operations on the objects in the existing architecture. But these operations can directly/indirectly affect the
+classes in the system. In those situations, this pattern can help us by putting all of these operations in the visitor hierarchy.

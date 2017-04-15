@@ -8,7 +8,7 @@
   - Prototype Pattern
   
   
-- Structural Design Patterns
+- **Structural Design Patterns**
   - Adapter Pattern
   - Composite Pattern
   - Proxy Pattern
@@ -16,9 +16,8 @@
   - Facade Pattern
   - Bridge Pattern
   - Decorator Pattern
-
-    - 
-- Behavioral Design Patterns
+     
+- **Behavioral Design Patterns**
   - Template Method Pattern
   - Mediator Pattern
   - Chain of Responsibility Pattern

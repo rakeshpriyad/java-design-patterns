@@ -1,5 +1,36 @@
 # Simplified Java Design patterns
 
+- Creational Design Patterns
+  - Singleton Pattern
+  - Factory Pattern
+  - Abstract Factory Pattern
+  - Builder Pattern
+  - Prototype Pattern
+  
+  
+- Structural Design Patterns
+  - Adapter Pattern
+  - Composite Pattern
+  - Proxy Pattern
+  - Flyweight Pattern
+  - Facade Pattern
+  - Bridge Pattern
+  - Decorator Pattern
+
+    - 
+- Behavioral Design Patterns
+  - Template Method Pattern
+  - Mediator Pattern
+  - Chain of Responsibility Pattern
+  - Observer Pattern
+  - Strategy Pattern
+  - Command Pattern
+  - State Pattern
+  - Visitor Pattern
+  - Interpreter Pattern
+  - Iterator Pattern
+  - Memento Pattern
+
 ## 1. Command Design Pattern:
 
 A Command Pattern says that "encapsulate a request under an object as a command and pass it to invoker object. Invoker object looks for the appropriate object which can handle this command and pass the command to the corresponding object and that object executes the command".

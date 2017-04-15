@@ -1,6 +1,6 @@
 # Simplified Java Design patterns
 
-- Creational Design Patterns
+- **Creational Design Patterns**
   - Singleton Pattern
   - Factory Pattern
   - Abstract Factory Pattern

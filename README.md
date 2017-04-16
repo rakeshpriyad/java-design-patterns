@@ -100,7 +100,7 @@ relationship—which is much easier to read and understand.
 maintain or implement.
 
 
-# Strategy Patterns (Or, Policy Patterns)
+## 3. Strategy Patterns (Or, Policy Patterns)
 It define a family of algorithms, encapsulate each one, and make them interchangeable. The
 strategy pattern lets the algorithm vary independently from client to client.
 
@@ -127,7 +127,7 @@ attacking, Team A becomes defensive. On the other hand, Team B goes for an all-o
 - The application configures the Context with the required Strategy object. Therefore, the application needs to create and maintain two objects in place of one.
 - Since, the Strategy object is created by the application in most cases; the Context has no control on lifetime of the Strategy object. However, the Context can make a local copy of the Strategy object. But, this increases the memory requirement and has a sure performance impact.
 
-## Decorator Patterns
+## 4. Decorator Patterns
 
 This patterns allow to attach additional responsibilities to an object dynamically. Decorators provide a flexible
 alternative to subclassing for extending functionality.
@@ -157,7 +157,7 @@ We can add or remove responsibilities by simply attaching or detaching decorator
 First of all, if we are careful enough, there is no significant disadvantage. But if we create too many decorators in the system, the system will be hard to maintain and debug. At the same time, the decorators can create unnecessary confusion.
 
 
-## Observer Patterns
+## 5. Observer Patterns
 
 Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 
@@ -165,7 +165,7 @@ In this pattern, there are many observers (objects) which are observing a partic
 
 
 
-## Visitor Patterns
+## 6. Visitor Patterns
 
 Represent an operation to be performed on the elements of an object structure. The visitor pattern lets you define a new operation without changing the classes of the elements on which it operates.
 
@@ -174,6 +174,21 @@ This pattern helps us to add new functionalities to an existing object structure
 
 - Real-Life Example
 Consider a taxi booking scenario. The taxi arrives at our defined location for the pickup. Once we enter into it, the visiting taxi takes control of the transportation. It can choose a different way toward our destination and we may or may not have any prior knowledge of that way.
+
+Visitor pattern is used when we have to perform an operation on a group of similar kind of Objects. With the help of visitor pattern, we can move the operational logic from the objects to another class.
+
+For example, think of a Shopping cart where we can add different type of items (Elements). When we click on checkout button, it calculates the total amount to be paid. Now we can have the calculation logic in item classes or we can move out this logic to another class using visitor pattern. Let’s implement this in our example of visitor pattern.
+
+
+Example 1 - Customers Application.
+
+We want to create a reporting module in our application to make statistics about a group of customers. The statistics should made very detailed so all the data related to the customer must be parsed. All the entities involved in this hierarchy must accept a visitor so the CustomerGroup, Customer, Order and Item are visitable objects.
+
+In the example we can see the following actors:
+
+IVisitor and IVisitable interfaces
+CustomerGroup, Customer, Order and Item are all visitable classes. A CustomerGroup represents a group of customers, each Customer can have one or more orders and each order can have one ore more Items.
+GeneralReport is a visitor class and implements the IVisitor interface.
 
 
 1. As mentioned earlier, the visitor pattern is very useful for adding new operations without affecting the existing structure, which was the key aim behind this
@@ -185,3 +200,16 @@ mechanism becomes complex.
 we now add Myclass2, we need to add additional operations in the visitor class hierarchy to support this pattern).
 5. Sometimes we need to perform some unrelated operations on the objects in the existing architecture. But these operations can directly/indirectly affect the
 classes in the system. In those situations, this pattern can help us by putting all of these operations in the visitor hierarchy.
+
+## Memento Design Pattern
+Memento design pattern is one of the behavioral design pattern. Memento design pattern is used when we want to save the state of an object so that we can restore later on. Memento pattern is used to implement this in such a way that the saved state data of the object is not accessible outside of the object, this protects the integrity of saved state data.
+
+- Real-Life Example
+One of the best real life example is the text editors where we can save it’s data anytime and use undo to restore it to previous saved state.
+
+We will implement the same feature and provide a utility where we can write and save contents to a File anytime and we can restore it to last saved state. For simplicity, I will not use any IO operations to write data into file.
+
+
+
+## Composite Design Pattern
+![Composite pattern](https://github.com/rakeshpriyad/java-design-patterns/blob/master/src/test/composite.png)

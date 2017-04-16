@@ -212,4 +212,40 @@ We will implement the same feature and provide a utility where we can write and 
 
 
 ## Composite Design Pattern
+Compose objects into tree structures to represent part-whole hierarchies. The composite pattern lets clients treat individual objects and compositions of objects uniformly.
+
+### Component
+is the abstraction for all components, including composite ones declares the interface for objects in the composition (optional) defines an interface for accessing a component's parent in the recursive structure, and implements it if that's appropriate
+### Leaf
+represents leaf objects in the composition implements all Component methods
+### Composite
+represents a composite Component (component having children) implements methods to manipulate children implements all Component methods, generally by delegating them to its children
+
 ![Composite pattern](https://github.com/rakeshpriyad/java-design-patterns/blob/master/src/test/composite.png)
+
+### Advantages of Composite Patterns:
+- The Composite pattern makes the client simple:
+- Clients use the Component class interface to interact with objects in the composite structure.
+- If call is made to a Leaf, the request is handled directly.
+- If call is to a Composite, it forwards the request to its child components.
+
+### Disadvantage:
+
+- Once tree structure is defined, the composite design makes the tree overly general.
+- In specific cases, it is difficult to restrict the components of the tree to only particular types. Therefore, to enforce such constraint, the program must rely on run-time checks, since it cannot use the type system the of programming language.
+
+
+
+
+## Adapter Patterns
+Convert the interface of a class into another interface that clients expect. The adapter pattern lets classes work together that couldn’t otherwise because of incompatible interfaces.
+
+
+- Real–Life Example
+The most common example of this type can be found with mobile charging devices. If our charger is not supported by a particular kind of switchboard, we need to use an adapter. Even the translator who is translating language for one person is following this pattern in real life.
+
+We are having another interface AdvancedMediaPlayer and concrete classes implementing the AdvancedMediaPlayer interface. These classes can play vlc and mp4 format files.
+
+We want to make AudioPlayer to play other formats as well. To attain this, we have created an adapter class MediaAdapter which implements the MediaPlayer interface and uses AdvancedMediaPlayer objects to play the required format.
+
+AudioPlayer uses the adapter class MediaAdapter passing it the desired audio type without knowing the actual class which can play the desired format. AdapterPatternDemo, our demo class will use AudioPlayer class to play various formats.

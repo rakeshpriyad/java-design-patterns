@@ -295,4 +295,5 @@ Usage of Bridge Pattern
 ## 12. State Pattern
 Allow an object to alter its behavior when its internal state changes. The object will appear to
 change its class.
+
 ![Composite pattern](https://github.com/rakeshpriyad/java-design-patterns/blob/master/src/test/state_pattern.png)

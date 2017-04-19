@@ -201,7 +201,7 @@ we now add Myclass2, we need to add additional operations in the visitor class h
 5. Sometimes we need to perform some unrelated operations on the objects in the existing architecture. But these operations can directly/indirectly affect the
 classes in the system. In those situations, this pattern can help us by putting all of these operations in the visitor hierarchy.
 
-## Memento Design Pattern
+## 7. Memento Design Pattern
 Memento design pattern is one of the behavioral design pattern. Memento design pattern is used when we want to save the state of an object so that we can restore later on. Memento pattern is used to implement this in such a way that the saved state data of the object is not accessible outside of the object, this protects the integrity of saved state data.
 
 - Real-Life Example
@@ -211,7 +211,7 @@ We will implement the same feature and provide a utility where we can write and 
 
 
 
-## Composite Design Pattern
+## 8. Composite Design Pattern
 Compose objects into tree structures to represent part-whole hierarchies. The composite pattern lets clients treat individual objects and compositions of objects uniformly.
 
 ### Component
@@ -237,7 +237,7 @@ represents a composite Component (component having children) implements methods 
 
 
 
-## Adapter Patterns
+## 9. Adapter Patterns
 Convert the interface of a class into another interface that clients expect. The adapter pattern lets classes work together that couldn’t otherwise because of incompatible interfaces.
 
 
@@ -251,7 +251,7 @@ We want to make AudioPlayer to play other formats as well. To attain this, we ha
 AudioPlayer uses the adapter class MediaAdapter passing it the desired audio type without knowing the actual class which can play the desired format. AdapterPatternDemo, our demo class will use AudioPlayer class to play various formats.
 
 
-Proxy Pattern :
+## 10. Proxy Pattern :
 Provide a surrogate or placeholder for another object to control access to it.
 
 In a classroom, when one student is absent, during roll call, his best friend may try to mimic the student’s voice to try to keep his friend from being marked as absent.
@@ -266,7 +266,7 @@ A typical operation is counting the number of references to the actual object.
 
 
 
-## Bridge Pattern
+## 11. Bridge Pattern
 
 A Bridge Pattern says that just "decouple the functional abstraction from the implementation so that the two can vary independently".
 The Bridge Pattern is also known as Handle or Body.

@@ -249,3 +249,44 @@ We are having another interface AdvancedMediaPlayer and concrete classes impleme
 We want to make AudioPlayer to play other formats as well. To attain this, we have created an adapter class MediaAdapter which implements the MediaPlayer interface and uses AdvancedMediaPlayer objects to play the required format.
 
 AudioPlayer uses the adapter class MediaAdapter passing it the desired audio type without knowing the actual class which can play the desired format. AdapterPatternDemo, our demo class will use AudioPlayer class to play various formats.
+
+
+Proxy Pattern :
+Provide a surrogate or placeholder for another object to control access to it.
+
+In a classroom, when one student is absent, during roll call, his best friend may try to mimic the student’s voice to try to keep his friend from being marked as absent.
+
+What are the different types of proxies?
+Mainly we are familiar with the following types:
+- Remote proxies. They will hide that actual object which is in a different address space.
+- Virtual proxies. They are used to perform optimization techniques like the creation of a heavy object on a demand basis.
+- Protection proxies. They generally deal with different access rights.
+- Smart reference. It can also perform some additional housekeeping work when an object is accessed.
+A typical operation is counting the number of references to the actual object.
+
+
+
+## Bridge Pattern
+
+A Bridge Pattern says that just "decouple the functional abstraction from the implementation so that the two can vary independently".
+The Bridge Pattern is also known as Handle or Body.
+
+Here the :
+
+Question :  Abstraction
+JavaQuestion :Refined Abstraction
+Question Manager: Implementor
+QuestionFormat: 
+Advantage of Bridge Pattern
+
+![Composite pattern](https://github.com/rakeshpriyad/java-design-patterns/blob/master/src/test/bridge-pattern.jpg)
+
+- It enables the separation of implementation from the interface.
+- It improves the extensibility.
+- It allows the hiding of implementation details from the client.
+
+Usage of Bridge Pattern
+
+- When you don't want a permanent binding between the functional abstraction and its implementation.
+- When both the functional abstraction and its implementation need to extended using sub-classes.
+- It is mostly used in those places where changes are made in the implementation does not affect the clients.

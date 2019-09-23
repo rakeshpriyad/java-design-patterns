@@ -12,5 +12,4 @@ public class UpdateCommand implements Command{
 	public void execute() {
 		receiver.update();
 	}
-
 }

@@ -9,8 +9,6 @@ public class DeleteCommand implements Command{
 		this.receiver = receiver;
 		System.out.println("DeleteCommand");
 	}
-
-
 	public void execute() {
 		receiver.delete();
 	}

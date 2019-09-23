@@ -10,7 +10,6 @@ public class CommandDemo {
 		Client.save();
 		Client.update();
 		Client.delete();
-		
 	}
 
 }
